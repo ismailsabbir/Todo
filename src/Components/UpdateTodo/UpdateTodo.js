@@ -33,6 +33,9 @@ const UpdateTodo = () => {
       title: todo?.title,
       description: todo?.description,
       priority: todo?.priority,
+      completed: todo?.completed,
+      finalDate: todo?.finalDate,
+      finalTime: todo?.finalTime,
     };
     const index = todoinfo?.index;
     console.log(newData);
@@ -97,6 +100,21 @@ const UpdateTodo = () => {
               <option value="High">High</option>
               <option value="Med">Med</option>
               <option value="Low">Low</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group
+            className="mb-3 to_do_input_group"
+            controlId="formBasicEmail"
+          >
+            <Form.Label className="input_lavel">status</Form.Label>
+            <Form.Select
+              aria-label="Default select example"
+              name="priority"
+              value={todo?.completed}
+              onChange={(e) => settodo({ ...todo, completed: e.target.value })}
+            >
+              <option value="Completed">Completed</option>
+              <option value="Not Completed">Not Completed</option>
             </Form.Select>
           </Form.Group>
           <div className="add_todo_buttons">

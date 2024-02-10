@@ -6,6 +6,7 @@ import avatar from "../../Images/avatar4.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import Swal from "sweetalert2";
 import "./AllTodos.css";
+import { Form } from "react-bootstrap";
 const AllTodos = () => {
   const [allTodos, setAllTodos] = useState([]);
   const [completedTodos, setCompletedTodos] = useState([]);
@@ -85,9 +86,67 @@ const AllTodos = () => {
         return "";
     }
   }
+  const handlepriority = (status) => {
+    let savedTodos = JSON.parse(localStorage.getItem("todolist"));
+    setAllTodos(savedTodos);
+    const filterproduct = savedTodos?.filter(
+      (todo) => todo?.priority === status
+    );
+    setAllTodos(filterproduct);
+  };
+  const handlestatus = (status) => {
+    let savedTodos = JSON.parse(localStorage.getItem("todolist"));
+    setAllTodos(savedTodos);
+    const filterproduct = savedTodos?.filter(
+      (todo) => todo?.completed === status
+    );
+    setAllTodos(filterproduct);
+  };
+  const handleresetfilter = () => {
+    let savedTodos = JSON.parse(localStorage.getItem("todolist"));
+    setAllTodos(savedTodos);
+  };
   return (
     <div>
       <div className="all-to-do-con">
+        <div>
+          <h6 className="filter_title">Filter based on Priority/Status.</h6>
+          <div className="search_container">
+            <Form.Group
+              className="mb-3 to_do_search_group"
+              controlId="formBasicEmail"
+            >
+              <Form.Select
+                aria-label="Default select example"
+                name="priority"
+                // value={todo?.priority}
+                onChange={(e) => handlepriority(e.target.value)}
+              >
+                <option value="High">High</option>
+                <option value="Med">Med</option>
+                <option value="Low">Low</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group
+              className="mb-3 to_do_search_group"
+              controlId="formBasicEmail"
+            >
+              {/* <Form.Label className="input_lavel">status</Form.Label> */}
+              <Form.Select
+                aria-label="Default select example"
+                name="priority"
+                // value={todo?.completed}
+                onChange={(e) => handlestatus(e.target.value)}
+              >
+                <option value="Completed">Completed</option>
+                <option value="Not Completed">Not Completed</option>
+              </Form.Select>
+            </Form.Group>
+            <button onClick={handleresetfilter} className="reset_btn">
+              Filter Reset
+            </button>
+          </div>
+        </div>
         <div className="overflow-x-auto">
           <div className="overflow-x-auto">
             <table className="table to-do-table">

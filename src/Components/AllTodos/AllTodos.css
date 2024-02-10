@@ -2,6 +2,44 @@
     margin-top: 25px;
 }
 
+.filter_title {
+    color: #31304D;
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EBF3E8;
+    border: 1px solid #EBF3E8;
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.to_do_search_group {
+    width: 43%;
+    margin-top: 16px;
+}
+
+.reset_btn {
+    width: 10%;
+    border: 1px solid #86A789;
+    background-color: #86A789;
+    border-radius: 4px;
+    color: white;
+    padding: 6px;
+}
+
+.reset_btn:hover {
+    background-color: #739072;
+    border: 1px solid #739072;
+    cursor: pointer;
+}
+
 .user-image-name img {
     border-radius: 100%;
     width: 40px;
