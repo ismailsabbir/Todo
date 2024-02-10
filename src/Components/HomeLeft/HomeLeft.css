@@ -1,5 +1,6 @@
 .dashbord-left-con {
     padding-left: 5px;
+    margin: 0px;
 }
 
 .dashbord-link {
@@ -46,4 +47,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.menu-links {
+    display: none;
+}
+
+.dashbord-left-con.open .menu-links {
+    display: block;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: #164863;
+    margin-bottom: 15px;
+    background-color: #F1EAFF;
+    padding: 5px 10px;
+    border-radius: 2px;
+
+}
+
+.toggle-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.togal_logo {
+    border: 2px solid #164863;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 687px) {
+    .dashbord-left-con {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        width: 100%;
+    }
 }

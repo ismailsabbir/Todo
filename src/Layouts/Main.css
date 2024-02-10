@@ -5,9 +5,26 @@
 
 .dashbord-layout-left {
     padding: 25px;
+    padding-top: 0px;
 }
 
 .dashbordlayout-right {
     padding-top: 0px;
     background-color: rgb(245, 245, 245);
+}
+
+@media only screen and (max-width: 687px) {
+    .layout_con {
+        width: 95%;
+    }
+
+    .dashbord-layout-left {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .dashbordlayout-right {
+        width: 100%;
+    }
 }
