@@ -1,0 +1,55 @@
+.home_nav_con {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #283747;
+    color: white;
+    padding: 6px 4px;
+}
+
+.logo {
+    color: #3498DB;
+}
+
+.search_con {
+    background-color: white;
+    border-radius: 4px;
+    height: 40px;
+    margin-right: 6px;
+}
+
+.search_icon {
+    padding-right: 4px;
+    font-size: 1.3rem;
+    color: #5D6D7E;
+    height: 100%;
+    margin-left: 4px;
+}
+
+.search_con input {
+    border: none;
+    height: 100%;
+    padding-left: 4px;
+}
+
+.search_con input:focus {
+    border: none;
+}
+
+.notification {
+    margin-right: 6px;
+    font-size: 1.4rem;
+    color: #5D6D7E;
+}
+
+.user {
+    font-size: 1.3rem;
+    color: #5D6D7E;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}

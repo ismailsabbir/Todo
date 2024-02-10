@@ -46,7 +46,7 @@ const HomeLeft = () => {
         }
       >
         <RiMenuAddLine className="dashbord-icon"></RiMenuAddLine>
-        Add TodO
+        Add Todo
       </NavLink>
       <NavLink
         to="/dashbord/sheet/attendance"

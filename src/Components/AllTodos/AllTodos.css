@@ -1,0 +1,97 @@
+.all-to-do-con {
+    margin-top: 25px;
+}
+
+.user-image-name img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.to-do-tr {
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+.to_do_info {
+    font-size: 1rem;
+    color: #283747;
+}
+
+.to_do_title p {
+    width: 100%;
+    text-align: left;
+}
+
+.to_do_description p {
+    text-align: left;
+}
+
+.make_Completed {
+    width: 150px;
+    border: 1px solid #83C0C1;
+    padding: 3px;
+    background-color: #83C0C1;
+    color: white;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+.disabled {
+    border: 1px solid #AAD9BB;
+    background-color: #AAD9BB;
+}
+
+
+
+.make_Completed:hover {
+    cursor: pointer;
+    background-color: #2f9de7;
+}
+
+.disabled:hover {
+    border: 1px solid #AAD9BB;
+    background-color: #AAD9BB;
+    cursor: not-allowed;
+
+}
+
+.Edit_to_do {
+    font-size: 1.3rem;
+    color: #283747;
+    margin-right: 3px;
+}
+
+.Edit_to_do:hover {
+    cursor: pointer;
+    color: #3498DB;
+}
+
+.highPriority {
+    width: 60px;
+    color: white;
+    background-color: #59B4C3;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-weight: 400;
+}
+
+.mediumPriority {
+    width: 60px;
+    color: white;
+    background-color: #F3B95F;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-weight: 400;
+}
+
+.lowPriority {
+    width: 60px;
+    color: white;
+    background-color: #E78895;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-weight: 400;
+}

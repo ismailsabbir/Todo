@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaUserAlt } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
-
+import "./TopNavbar.css";
 const TopNavbar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">

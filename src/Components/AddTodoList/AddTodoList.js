@@ -7,6 +7,15 @@ const AddTodoList = () => {
   const [allTodos, setAllTodos] = useState([]);
   const [completedTodos, setCompletedTodos] = useState([]);
   const [isCompletedScreen, setIsCompletedScreen] = useState(false);
+  const date = new Date();
+  var dd = date.getDate();
+  var mm = date.getMonth() + 1;
+  var yyyy = date.getFullYear();
+  var hh = date.getHours();
+  var minutes = date.getMinutes();
+  var ss = date.getSeconds();
+  var finalDate = dd + "-" + mm + "-" + yyyy;
+  var finalTime = hh + ":" + minutes + ":" + ss;
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -18,6 +27,9 @@ const AddTodoList = () => {
       title: title,
       description: description,
       priority: priority,
+      completed: "Not Completed",
+      finalDate: finalDate,
+      finalTime: finalTime,
     };
     let updatedTodoArr = [...allTodos];
     updatedTodoArr.push(newToDoObj);
@@ -104,7 +116,7 @@ const AddTodoList = () => {
             <button type="submit" className="add_todo_btn">
               Add Todo
             </button>
-            <Link type="submit" className="cancel_todo_btn">
+            <Link to="/todo/list" className="cancel_todo_btn">
               Cancel
             </Link>
           </div>
