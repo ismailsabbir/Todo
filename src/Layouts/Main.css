@@ -1,0 +1,14 @@
+.layout_con {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dashbord-layout-left {
+    padding: 25px;
+}
+
+.dashbordlayout-right {
+    /* padding: 15px; */
+    padding-top: 0px;
+    background-color: rgb(245, 245, 245);
+}

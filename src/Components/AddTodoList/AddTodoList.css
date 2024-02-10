@@ -1,0 +1,54 @@
+.add_todo_con {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid rgb(214, 213, 213);
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.add_tod_hed {
+    background-color: #C3E2C2;
+    padding: 5px;
+    border-radius: 4px 4px 0px 0px;
+    color: #435585;
+}
+
+.add_todo_form {
+    padding: 15px;
+}
+
+.to_do_input_group {
+    display: flex;
+}
+
+.input_lavel {
+    width: 20%;
+    font-size: 1rem;
+    color: #45474B;
+    font-weight: 500;
+}
+
+.add_todo_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.add_todo_btn {
+    border: 1px solid #39A7FF;
+    background-color: #39A7FF;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.cancel_todo_btn {
+    text-decoration: none;
+    border: 1px solid #ED5AB3;
+    background-color: #ED5AB3;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
