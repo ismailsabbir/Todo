@@ -2,28 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Form } from "react-bootstrap";
-
 const UpdateTodo = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const todoinfo = location?.state;
   const [allTodos, setAllTodos] = useState([]);
-  const [completedTodos, setCompletedTodos] = useState([]);
   const [todo, settodo] = useState({});
   useEffect(() => {
     settodo(todoinfo?.todo);
   }, []);
   useEffect(() => {
     let savedTodos = JSON.parse(localStorage.getItem("todolist"));
-    let savedCompletedToDos = JSON.parse(
-      localStorage.getItem("completedTodos")
-    );
     if (savedTodos) {
       setAllTodos(savedTodos);
-    }
-
-    if (savedCompletedToDos) {
-      setCompletedTodos(savedCompletedToDos);
     }
   }, []);
 

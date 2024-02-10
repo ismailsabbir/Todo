@@ -1,23 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { MdOutlinePayments, MdProductionQuantityLimits } from "react-icons/md";
-import { TbCategory } from "react-icons/tb";
 import { LuCompass } from "react-icons/lu";
-import { MdOutlineNoteAlt } from "react-icons/md";
-import { FaAngleDown, FaBars } from "react-icons/fa";
 import { LuListTodo } from "react-icons/lu";
-import { FaPeopleGroup } from "react-icons/fa6";
 import { PiSquaresFourDuotone } from "react-icons/pi";
-import { FiSettings, FiUser, FiUsers } from "react-icons/fi";
+import { FiSettings } from "react-icons/fi";
 import { BiErrorCircle, BiHomeAlt, BiSolidContact } from "react-icons/bi";
-import { RiMenuAddLine, RiPagesLine } from "react-icons/ri";
+import { RiMenuAddLine } from "react-icons/ri";
 import "./HomeLeft.css";
 import { IoCalendarOutline, IoImagesOutline } from "react-icons/io5";
 const HomeLeft = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <div className="dashbord-left-con print:hidden">
       <NavLink
@@ -49,7 +40,7 @@ const HomeLeft = () => {
         Add Todo
       </NavLink>
       <NavLink
-        to="/dashbord/sheet/attendance"
+        to="/calender"
         className={({ isActive }) =>
           isActive ? "dashbord-active-link" : "dashbord-link"
         }
@@ -58,7 +49,7 @@ const HomeLeft = () => {
         Calendar
       </NavLink>
       <NavLink
-        to="/dashbord/sheet/attendance"
+        to="/dashbord/contact"
         className={({ isActive }) =>
           isActive ? "dashbord-active-link" : "dashbord-link"
         }
@@ -67,7 +58,7 @@ const HomeLeft = () => {
         Contact
       </NavLink>
       <NavLink
-        to="/dashbord/sheet/attendance"
+        to="/dashbord/gallary"
         className={({ isActive }) =>
           isActive ? "dashbord-active-link" : "dashbord-link"
         }

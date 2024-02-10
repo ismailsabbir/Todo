@@ -52,5 +52,6 @@
 
     .chart_container_mobile {
         overflow: auto;
+        margin-bottom: 30px;
     }
 }

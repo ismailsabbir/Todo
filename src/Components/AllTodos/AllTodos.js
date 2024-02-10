@@ -9,19 +9,11 @@ import "./AllTodos.css";
 import { Form } from "react-bootstrap";
 const AllTodos = () => {
   const [allTodos, setAllTodos] = useState([]);
-  const [completedTodos, setCompletedTodos] = useState([]);
   useEffect(() => {
     let savedTodos = JSON.parse(localStorage.getItem("todolist"));
     console.log(savedTodos);
-    let savedCompletedToDos = JSON.parse(
-      localStorage.getItem("completedTodos")
-    );
     if (savedTodos) {
       setAllTodos(savedTodos);
-    }
-
-    if (savedCompletedToDos) {
-      setCompletedTodos(savedCompletedToDos);
     }
   }, []);
   const handleToDoDelete = (index) => {
@@ -119,7 +111,6 @@ const AllTodos = () => {
               <Form.Select
                 aria-label="Default select example"
                 name="priority"
-                // value={todo?.priority}
                 onChange={(e) => handlepriority(e.target.value)}
               >
                 <option value="High">High</option>
@@ -131,11 +122,9 @@ const AllTodos = () => {
               className="mb-3 to_do_search_group"
               controlId="formBasicEmail"
             >
-              {/* <Form.Label className="input_lavel">status</Form.Label> */}
               <Form.Select
                 aria-label="Default select example"
                 name="priority"
-                // value={todo?.completed}
                 onChange={(e) => handlestatus(e.target.value)}
               >
                 <option value="Completed">Completed</option>
@@ -166,7 +155,6 @@ const AllTodos = () => {
                     <td className="das-order-data">
                       <span className="user-image-name">
                         <img src={avatar} alt="" />
-                        {/* <p className="staff_name_mobile">{order?.name}</p> */}
                       </span>
                     </td>
                     <td className="to_do_info">
@@ -180,8 +168,8 @@ const AllTodos = () => {
                       </span>{" "}
                     </td>
                     <td className="to_do_info">
-                      <span className="staff_join_mobile">
-                        <p className="staff_join_mobile">{todo?.finalDate}</p>
+                      <span className="task_date">
+                        <p className="">{todo?.finalDate}</p>
                       </span>{" "}
                     </td>
                     <td className="to_do_info">
@@ -190,7 +178,9 @@ const AllTodos = () => {
                       </span>{" "}
                     </td>
                     <td className="to_do_info">
-                      <span>{todo?.completed}</span>
+                      <span className="status_span">
+                        <p>{todo?.completed}</p>
+                      </span>
                     </td>
                     <td className="to_do_info">
                       <button
@@ -198,7 +188,6 @@ const AllTodos = () => {
                         className={`make_Completed ${
                           todo?.completed !== "Not Completed" ? "disabled" : ""
                         }`}
-                        // className="make_Completed"
                         disabled={todo?.completed !== "Not Completed"}
                       >
                         Make Completed

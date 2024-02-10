@@ -52,3 +52,24 @@
     padding: 5px 20px;
     border-radius: 4px;
 }
+
+@media only screen and (max-width: 687px) {
+    .to_do_input_group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .input_lavel {
+        width: 100%;
+    }
+
+    .add_todo_btn {
+        width: 48%;
+        text-align: center;
+    }
+
+    .cancel_todo_btn {
+        width: 48%;
+        text-align: center;
+    }
+}

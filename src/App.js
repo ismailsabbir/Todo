@@ -5,6 +5,8 @@ import Main from "./Layouts/Main";
 import AddTodoList from "./Components/AddTodoList/AddTodoList";
 import AllTodos from "./Components/AllTodos/AllTodos";
 import UpdateTodo from "./Components/UpdateTodo/UpdateTodo";
+import Calender from "./Components/Calender/Calender";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +29,14 @@ function App() {
         {
           path: "/update/todo",
           element: <UpdateTodo></UpdateTodo>,
+        },
+        {
+          path: "/calender",
+          element: <Calender></Calender>,
+        },
+        {
+          path: "*",
+          element: <NotFound></NotFound>,
         },
       ],
     },

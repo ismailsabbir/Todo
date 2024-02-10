@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./AddTodoList.css";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 const AddTodoList = () => {
   const [allTodos, setAllTodos] = useState([]);
-  const [completedTodos, setCompletedTodos] = useState([]);
-  const [isCompletedScreen, setIsCompletedScreen] = useState(false);
   const date = new Date();
   var dd = date.getDate();
   var mm = date.getMonth() + 1;
@@ -61,15 +59,8 @@ const AddTodoList = () => {
   };
   useEffect(() => {
     let savedTodos = JSON.parse(localStorage.getItem("todolist"));
-    let savedCompletedToDos = JSON.parse(
-      localStorage.getItem("completedTodos")
-    );
     if (savedTodos) {
       setAllTodos(savedTodos);
-    }
-
-    if (savedCompletedToDos) {
-      setCompletedTodos(savedCompletedToDos);
     }
   }, []);
   return (
@@ -104,9 +95,6 @@ const AddTodoList = () => {
           >
             <Form.Label className="input_lavel">Priority</Form.Label>
             <Form.Select aria-label="Default select example" name="priority">
-              {/* <option selected disabled>
-                Select Task Priority
-              </option> */}
               <option value="High">High</option>
               <option value="Med">Med</option>
               <option value="Low">Low</option>
